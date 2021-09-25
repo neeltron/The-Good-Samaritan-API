@@ -1,0 +1,12 @@
+import http.client
+
+conn = http.client.HTTPSConnection("The-Good-Samaritan-API.neeltron.repl.co")
+
+headers = { 'authorization': "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlM3UlpYWUNHTkxqVmdEYVJjekg2ViJ9.eyJpc3MiOiJodHRwczovL2Rldi16M2dienpmOS51cy5hdXRoMC5jb20vIiwic3ViIjoiQUdFRE92MmNnM0h5ZlFUaGxBakNFS2Z0elhNY2owYlNAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vVEdTL2FwaSIsImlhdCI6MTYzMjU4ODQ2OSwiZXhwIjoxNjMyNjc0ODY5LCJhenAiOiJBR0VET3YyY2czSHlmUVRobEFqQ0VLZnR6WE1jajBiUyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.MfwrMSUSB-mVKOwuJ-Muv9BDP5VZtSlgC8lZcvR830zbT_HQYA7_eHpdExeqy91ugJir_Vp_KIt4duLg8msl725gDK50q4d32vInamChUsm_8adAHjGgkoaKauQMSUqLf1q8Tite0FK6p8R2YaSxsA3K8lXYgZYqab1S-8C2FS6ORForVg5fLZSJeG7pAhvFIv9gZWKSabfGN99JEn2RDdFcs-ikMbltJZ51jgBBSztf2Tk5lR0gzKHO9g_s50rAYqVEhW4ksbFAhwEhHY__myHqHuaUndVGdnN4GwQTA82FsAnIyJHsFtQXfVAKSI-hqMGF7VRVEerYauL47QcAWA"}
+
+conn.request("GET", "/api/private", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))

@@ -8,6 +8,10 @@ authors = ["neeltron <<>>"]
 python = "^3.8"
 Flask = "^2.0.1"
 replit = "^3.2.4"
+python-dotenv = "^0.19.0"
+python-jose = "^3.3.0"
+Flask-Cors = "^3.0.10"
+six = "^1.16.0"
 
 [tool.poetry.dev-dependencies]
 
