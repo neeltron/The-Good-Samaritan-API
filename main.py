@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from replit import db
 import random
-db.clear()
+import json
 app = Flask('app')
 
 @app.route('/')
